@@ -1,0 +1,68 @@
+data = [["folder", "coursework.doc", "folder", "pict.png", "data.accdb"],
+        ["icon.ico", "script.js", "index.html", "style.css", "prog.py"],
+        ["my_song.mp3", "anapa-2003.png", "cs_1.6.exe", "folder", "cheat.txt"],
+        ["notes.txt", "main.py", "work.pdf", "cartoon.mp4", "array.py"],
+        ["project.psd", "cycle.py", "folder", "cycle.js", "turtle.py"]]
+python = ""
+javascript = ""
+print("Начальный список:")
+for i in data:
+    print(i)
+for row in data:
+    i = 0
+    while i != len(row):
+        elem = row[i]
+        if elem == "folder":
+            row.pop(i)
+            i -= 1
+        if elem == "data.accdb":
+            row[i] = "data.sql"
+        if ".py" in elem:
+            python += elem + " "
+        if ".js" in elem:
+            javascript += "new_" + elem + " "
+        i += 1
+print("\nСписок без папок и с заменой data:")
+for i in data:
+    print(i)
+print(f"\nВсе файлы .py:\n{python}")
+print(f"\nВсе new_файлы .js:\n{javascript}"
+#задание 2
+word_numb = ["ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"]
+user = int(input("Введите число от 0 до 9: "))
+if user < 0 or user > 9:
+    print("Неверное число")
+    quit()
+for i in range(user + 1):
+    print(word_numb[i])
+#задание 3
+bin_sy = ["11011111", "11011101", "11000111", "11011100", "11011110"]
+dec_sy = []
+for bin in bin_sy:
+    dec = 0
+    j = 0
+    for i in range(len(bin) - 1, -1, -1):
+        dec += int(bin[i]) * (2 ** j)
+        j += 1
+    dec_sy.append(dec)
+print(dec_sy)
+print(max(dec_sy))
+print(min(dec_sy))
+#задание 4
+matrix = [[-446, 281, -80],
+          [465, 432, -122],
+          [13, "error", 8]]
+matrix_sum = 0
+for row in matrix:
+    for i, elem in enumerate(row):
+        if isinstance(elem, str):
+            row[i] = len(elem)
+        matrix_sum += row[i]
+print(matrix)
+print(matrix_sum)
+#задание 5
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+matrix_sum = matrix[0][0] + matrix[1][1] + matrix[2][2]
+print(matrix_sum)
