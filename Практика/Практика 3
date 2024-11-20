@@ -1,0 +1,59 @@
+#задание 1
+minutes = int(input("Введите количество минут: "))
+hours = minutes // 60
+minutes = minutes % 60
+print(f"{hours} часов {minutes} минут")
+#задание 2
+a = int(input("Введите a: "))
+b = int(input("Введите b: "))
+h = int(input("Введите h: "))
+if h < a:
+    print("Недосып")
+elif h > b:
+    print("Пересып")
+else:
+    print("Всё хорошо")
+#задание 3
+a = int(input("Введите a: "))
+b = int(input("Введите b: "))
+c = int(input("Введите c: "))
+p = (a + b + c) / 2
+s = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+print(f"Площадь треугольника: {s}")
+#задание 4
+command = input("Выберите форму комнаты (прямоугольник/треугольник/круг): ")
+if command == "прямоугольник":
+    a = int(input("Введите длину комнаты: "))
+    b = int(input("Введите ширину комнаты: "))
+    s = a * b
+    print(f"Площадь комнаты: {s}")
+elif command == "треугольник":
+    a = int(input("Введите первую сторону комнаты: "))
+    b = int(input("Введите вторую сторону комнаты: "))
+    c = int(input("Введите третью сторону комнаты: "))
+    p = (a + b + c) / 2
+    s = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+    print(f"Площадь комнаты: {s}")
+elif command == "круг":
+    a = int(input("Введите радиус комнаты: "))
+    s = a * 3.14
+    print(f"Площадь комнаты: {s}")
+else:
+    print("Неверная команда")
+#задание 5
+n = int(input("Введите n: "))
+n = n % 100
+if n % 10 == 1 and n != 11:
+    print(f"{n} программист")
+elif (n % 10 == 2 or n % 10 == 3 or n % 10 == 4) and (n != 12 or n != 13 or n != 14):
+    print(f"{n} программиста")
+else:
+    print(f"{n} программистов")
+#задание 6
+ticket = input("Введите номер билета: ")
+a = int(ticket[0]) + int(ticket[1]) + int(ticket[2])
+b = int(ticket[-1]) + int(ticket[-2]) + int(ticket[-3])
+if a == b:
+    print("Счастливый")
+else:
+    print("Не счастливый")
