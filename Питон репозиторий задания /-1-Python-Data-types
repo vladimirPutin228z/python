@@ -1,0 +1,42 @@
+#задание 1
+integer_var = 123
+float_var = 123.45
+string_var = "Goool"
+list_var = [1, 2, 3, 4, 5]
+tuple_var = (1, 2, 3, 4, 5)
+dict_var = {1: 2, 11: 22}
+set_var = {1, 2, 3, 4, 5}
+bool_var = True
+
+print(integer_var)
+print(float_var)
+print(string_var)
+print(list_var)
+print(tuple_var)
+print(dict_var)
+print(set_var)
+print(bool_var)
+#задание 2
+name = "Marat"
+age = 18
+average_grade = 2.7
+favorite_movies = ["Interstellar", "Lord of The Rings", "star wars"]
+personal_info = ("Rozentur", 234, 2.7)
+skills = {"Programming": 7, "Math": 8, "Sleeping": 10}
+visited_countries = {"Russia", "Germany", "France", "Turkey"}
+has_driver_license = False
+
+print(name)
+print(age)
+print(average_grade)
+print(favorite_movies)
+print(personal_info)
+print(skills)
+print(visited_countries)
+print(has_driver_license)
+#задание 3 
+CPU = "Intel Core i5 10400F"
+RAM = 32
+Speed = 82.42
+list = [CPU, RAM, Speed]
+print(list)
