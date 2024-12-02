@@ -1,0 +1,78 @@
+names = ["Richard", "Igor", "Jonathan", "Alice", "Mary", "Bonnie"]
+for i in names:
+    print("Hello", i, "!")
+#задание 2
+phrase = "I'm learning cycles."
+for i in range(10):
+    print(phrase)
+#задание 3
+stations = ["Малиновка", "Рябиновка", "Суслово", "Дрожжино", "Звягино"]
+for i in stations:  # range(len(stations)):
+    if i == stations[-1]:
+        print("Поезд на станции:", i, "конечная!")
+    else:
+        print("Поезд на станции:", i)
+#задание 4
+shop = ["Laptop", "Smartphone", "Watch", "Tablet", "Headphones"]
+for i in shop:
+    if i == "Laptop":
+        print("I'm buying this.")
+        break
+else:
+    print("I don't need it.")
+#задание 5
+tasks = ["Сдать проект (Важная)", "Сходить в магазин", "Позвонить врачу (Важная)", "Убраться в комнате",
+         "Подготовить отчёт"]
+for i, task in enumerate(tasks, start=1):
+    if "(Важная)" in task:
+        print(i, "!:", task)
+    else:
+        print(i, ":", task)
+#задание 6
+i = int(input("Введите количество чисел: "))
+x = 0
+for x in range(i):
+    x = x + int(input("Введите число: "))
+print("Сумма чисел: ", x)
+#задание 7
+x = 0
+while x != 10:
+    print("Цикл сработал", x, "раз")
+    x += 1
+#задание 8
+while True:
+    x = input()
+    if x == "w":
+        print("Персонаж  идёт прямо")
+    elif x == "a":
+        print("Персонаж  идёт влево")
+    elif x == "s":
+        print("Персонаж  идёт назад")
+    elif x == "d":
+        print("Персонаж  идёт вправо")
+    elif x == "stop":
+        break
+    else:
+        print("Неизвестная команда")
+print("Программа остановлена")
+#задание 9
+while True:
+    x = int(input("Введите число от 1 до 9: "))
+    if 0 <= x <= 9:
+        for i in range(1, 11):
+            print(x, "*", i, "=", x * i)
+        else:
+            break
+    else:
+        print("Число вне диапазона. Попробуйте снова.")
+#задание 10
+print("Загадка: Музыкант, певец, расказчик - а всего труба да ящик.")
+i = 3
+while i > 0:
+    print("Попыток осталось:", i)
+    if input("Ответ: ") == "граммофон":
+        print("Верно!")
+        break
+    else:
+        print("Неверно!")
+        i -= 1
