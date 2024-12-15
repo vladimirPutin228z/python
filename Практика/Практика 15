@@ -1,0 +1,151 @@
+import turtle
+
+for i in range(4):
+    turtle.forward(150)
+    turtle.right(90)
+turtle.done()
+#задание 2 
+import turtle
+
+turtle.forward(300)
+turtle.left(90)
+turtle.forward(400)
+turtle.goto(0, 0)
+turtle.done()
+#задание 3
+import turtle
+
+turtle.bgcolor("black")
+turtle.color("red")
+turtle.circle(80)
+turtle.done()
+#задание 4
+import turtle
+
+turtle.circle(50, 90)
+turtle.circle(100, 90)
+turtle.circle(50, 90)
+turtle.circle(100, 90)
+turtle.done()
+#задание 5
+import turtle
+
+turtle.fillcolor("red")
+turtle.begin_fill()
+for i in range(5):
+    turtle.forward(100)
+    turtle.left(72)
+    turtle.forward(100)
+    turtle.right(144)
+turtle.end_fill()
+turtle.done()
+#задание 6
+import turtle
+
+turtle.bgcolor("black")
+colors = ["red", "blue", "green", "cyan", "magenta", "yellow"]
+turtle.pensize(3)
+for i in range(12):
+    turtle.color(colors[i%len(colors)])
+    turtle.circle(60)
+    turtle.left(30)
+turtle.done()
+#задание 7
+import turtle
+
+a = turtle.Turtle()
+b = turtle.Turtle()
+a.color("green")
+a.circle(100,180)
+a.home()
+b.color("red")
+b.left(180)
+b.circle(-100,180)
+b.left(180)
+b.circle(100,90)
+b.left(90)
+b.forward(200)
+turtle.done()
+#задание 8
+import turtle
+
+for i in range(4):
+    turtle.forward(100)
+    turtle.circle(50,90)
+turtle.penup()
+turtle.goto(50,100)
+turtle.write("Hello World!")
+turtle.done()
+#задание 9
+import turtle
+
+turtle.Screen().bgpic("back1.png")
+turtle.goto(0,-100)
+turtle.goto(-100,-100)
+turtle.goto(-100,100)
+turtle.goto(50,100)
+turtle.goto(50,50)
+turtle.goto(100,50)
+turtle.goto(100,-50)
+turtle.done()
+#задание 10
+import turtle
+
+turtle.Screen().bgpic("back2.png")
+turtle.color("white")
+turtle.forward(52)
+turtle.left(90)
+turtle.circle(52,270)
+turtle.right(90)
+turtle.forward(120)
+turtle.right(90)
+turtle.circle(-155,180)
+turtle.forward(195)
+turtle.right(90)
+turtle.forward(200)
+turtle.right(56)
+turtle.forward(195)
+turtle.right(115)
+turtle.forward(85)
+turtle.right(74)
+turtle.forward(88)
+turtle.done()
+#задание 11
+import turtle
+
+colors = ["red", "blue", "green", "cyan", "magenta", "yellow"]
+for i in colors:
+    turtle.color(i)
+    turtle.begin_fill()
+    turtle.circle(60)
+    turtle.end_fill()
+turtle.done()
+#задание 12
+import turtle
+turtle.setheading(90)
+step_total = 0
+while True:
+    wasd = turtle.textinput("Куда" ,"Куда")
+    step = turtle.numinput("Сколько", "Сколько")
+    if wasd == "w":
+        turtle.forward(step)
+    elif wasd == "a":
+        turtle.left(90)
+        turtle.forward(step)
+    elif wasd == "s":
+        turtle.left(180)
+        turtle.forward(step)
+    elif wasd == "d":
+        turtle.right(90)
+        turtle.forward(step)
+    elif wasd == "exit":
+        break
+    step_total += step
+turtle.write(f"Всего сделано {step_total} шагов")
+turtle.done()
+
+
+
+
+
+
