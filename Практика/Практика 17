@@ -1,0 +1,44 @@
+from random import randint, shuffle
+
+
+def figprint(fig: list):
+    print(f"{fig[0]}{fig[1]}\n{fig[2]}{fig[3]}")
+
+
+def figrotate(fig: str, figfin: list):
+    if fig == figfin[0]:
+        fig = figfin[1]
+    elif fig == figfin[1]:
+        fig = figfin[2]
+    elif fig == figfin[2]:
+        fig = figfin[3]
+    elif fig == figfin[3]:
+        fig = figfin[0]
+    return fig
+
+
+figlist = [["┌", "┐", "└", "┘"], ["╔", "╗", "╚", "╝"]]
+fig = figlist[randint(0, len(figlist) - 1)]
+figfin = fig
+print(f"Должна получится такая фигура:")
+figprint(figfin)
+print("С помощью кнопок 1234 крутите элементы фигуры")
+fig = list(fig)
+shuffle(fig)
+while fig != figfin:
+    print("Текущая фигура:")
+    figprint(fig)
+    user = input()
+    if user == "1":
+        fig[0] = figrotate(fig[0], figfin)
+    elif user == "2":
+        fig[1] = figrotate(fig[1], figfin)
+    elif user == "3":
+        fig[2] = figrotate(fig[2], figfin)
+    elif user == "4":
+        fig[3] = figrotate(fig[3], figfin)
+    else:
+        print("Неправильный ввод")
+print("Текущая фигура:")
+figprint(fig)
+print("Получилось!")
