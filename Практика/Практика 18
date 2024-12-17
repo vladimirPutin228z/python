@@ -1,0 +1,55 @@
+from PIL import Image
+
+img = Image.open("screenshot.jpg")
+img = img.convert("L")
+img.save("screenshot_bw.jpg")
+ #задание 2
+from PIL import Image
+
+img = Image.open("screen_camera.png")
+img = img.rotate(180)
+img.save("screen_camera.png")
+#задание 3
+from PIL import Image
+
+img = Image.open("figures.png")
+img = img.crop((271, 123, 476, 401))
+img.save("cube.png")
+#задание 4
+from PIL import ImageDraw, Image, ImageFont
+
+img = Image.new("RGB", (200, 200), "cyan")
+draw = ImageDraw.Draw(img)
+font = ImageFont.truetype("impact.ttf", size=20)
+draw.text((25, 90), "Mankurt0 was here", font=font)
+img.save("Mankurt0 was here.png")
+#задание 5
+from PIL import ImageDraw, Image
+
+img = Image.open("pixels.png")
+draw = ImageDraw.Draw(img)
+draw.rectangle((23,151,51,229), fill="blue")
+draw.rectangle((178,36,221,79), fill="red")
+img.save("pixels_ready.png")
+#задание 6
+from PIL import ImageDraw, Image
+
+pixels = [[0,1,1,1,1,1,1,1,0],
+          [1,0,1,1,1,1,1,0,1],
+          [1,1,1,0,0,0,1,1,1],
+          [1,1,0,1,0,1,0,1,1],
+          [1,1,0,0,1,0,0,1,1],
+          [1,1,0,1,0,1,0,1,1],
+          [1,1,1,0,0,0,1,1,1],
+          [1,0,1,1,1,1,1,0,1],
+          [0,1,1,1,1,1,1,1,0]]
+img = Image.new("RGB", (9,9), "white")
+draw = ImageDraw.Draw(img)
+for y, row in enumerate(pixels):
+    for x, pixel in enumerate(row):
+        if pixel == 1:
+            color = "black"
+        else:
+            color = "white"
+        draw.rectangle((x,y,x,y), fill=color)
+img.save("my pixel pict.png")
