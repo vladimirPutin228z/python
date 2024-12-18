@@ -1,0 +1,7 @@
+from PIL import ImageDraw, Image, ImageFont
+
+img = Image.new("RGB", (200, 200), "red")
+draw = ImageDraw.Draw(img)
+font = ImageFont.truetype("impact.ttf", size=20)
+draw.text((25, 90), "Marat was here", font=font)
+img.save("Marat was here.png")
